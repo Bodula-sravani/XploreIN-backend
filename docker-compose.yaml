@@ -1,0 +1,38 @@
+version: "3"  # optional since v1.27.0
+services:
+  sql:
+    image: "mcr.microsoft.com/mssql/server:2022-latest"
+    container_name: sql_server2022
+    ports: # Not needed since we are using a custom network
+      - "1405:1433" # host:container
+    # volumes:
+      # - db_data:/var/opt/mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=A&VeryComplex123Password
+      - MSSQL_DB=getfitdb
+
+  web_api:
+    image: "ghcr.io/bodula-sravani/xplorein-apis:latest"
+    # image: "ghcr.io/harshithpaladi/getfitapicontainerconfig:latest"
+    container_name: web_api_application
+    ports:
+      - "7155:443"
+      - "8080:80"
+    depends_on:
+      - sql
+    environment:
+     # - ASPNETCORE_URLS=https://+:443;http://+:80
+     # - ASPNETCORE_HTTPS_PORT=7155
+      - ASPNETCORE_ENVIRONMENT=Development
+      - DB_HOST=sql_server2022
+      - DB_NAME=getfitdb
+      - DB_SA_PASSWORD=A&VeryComplex123Password
+      #- SSL_CERTIFICATE_PATH=/app/certificates/cert.pem
+     # - SSL_KEY_PATH=/app/certificates/cert.key
+    #volumes:
+      # - ~/certificates:/app/certificates
+      #- /mnt/d/certificates/:/app/certificates
+
+#volumes:
+  #db_data:

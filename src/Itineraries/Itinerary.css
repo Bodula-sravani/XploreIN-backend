@@ -1,0 +1,106 @@
+/* html,
+body {
+  height: 100%;
+}
+
+html {
+  background: url("https://img.freepik.com/premium-photo/abstract-background-balloon-travel-multi-colored-hot-air-balloon-flying-among-white-clouds_407474-1285.jpg");
+  background-size: 100% 100%;
+  background-repeat: repeat;
+} */
+
+.itineraryPage {
+  background: url("https://img.freepik.com/premium-photo/abstract-background-balloon-travel-multi-colored-hot-air-balloon-flying-among-white-clouds_407474-1285.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+
+.myFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.myFlexItem {
+  margin: 20px;
+}
+
+.titleBar {
+  justify-content: space-between;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.form-row label {
+  width: 120px;
+  margin-right: 10px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+.itineraryCard {
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  height: "300px";
+  width: "300px";
+  transition: all 0.5s;
+}
+
+.itineraryCard:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.itineraryCard:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+@media (max-width: 768px) {
+  .myFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .titleBar {
+    justify-content: space-between;
+  }
+
+  /* .myFlexItem {
+    flex-basis: 100%;
+  } */
+
+  .form-row label {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 5px;
+    font-size: 12px; /* Decrease the font size of labels further for smaller screens */
+  }
+
+  .form-row input {
+    width: 100%;
+    font-size: 12px; /* Decrease the font size of input text further for smaller screens */
+  }
+
+  .form-row input::placeholder {
+    font-size: 12px; /* Decrease the font size of input placeholders for smaller screens */
+  }
+  .itineraryPage {
+    background-size: 100% 100%;
+    background-position: top;
+    height: 100%;
+  }
+}

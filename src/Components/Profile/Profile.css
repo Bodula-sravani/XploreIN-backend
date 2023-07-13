@@ -1,0 +1,113 @@
+.myLoginFlex {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.LoginForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  align-items: center;
+}
+.LoginForm {
+  flex: 1;
+}
+.Label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 5px;
+}
+.Label label {
+  width: 5rem;
+}
+.Label input {
+  width: 15rem;
+}
+
+.LoginButton {
+  display: flex;
+  width: 8rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+button {
+  background-color: whitesmoke;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: lightblue;
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+  display: block;
+  min-width: 160px;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: white;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column !important;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  /* padding: 0.25rem 1.5rem; */
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  display: block !important;
+}
+
+.listButtons {
+  background: transparent;
+  border: none;
+  color: black;
+  margin: 0;
+}
+
+.nonClickable {
+  pointer-events: none;
+  cursor: default;
+}
