@@ -109,7 +109,7 @@ namespace XploreIN.Controllers
                 tempUser.EmailConfirmed = true;
                 await _userManager.UpdateAsync(tempUser);
                 // Add user to a role
-                await _userManager.AddToRoleAsync(tempUser, "User");
+                //await _userManager.AddToRoleAsync(tempUser, "User");
                 //  var tokenString = GenerateJwtToken(user);
                 //   return Ok(new { Token = tokenString });
                 return Ok();

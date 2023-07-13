@@ -13,7 +13,7 @@ services:
       - MSSQL_DB=getfitdb
 
   web_api:
-    image: "ghcr.io/bodula-sravani/xplorein-apis:latest"
+    image: "ghcr.io/bodula-sravani/xplorein-backend:latest"
     # image: "ghcr.io/harshithpaladi/getfitapicontainerconfig:latest"
     container_name: web_api_application
     ports:
